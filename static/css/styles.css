@@ -106,6 +106,7 @@ html {
   
   /* ----DESCRIPTION START---- */
   .description-header {
+
     /* Positioning */
     margin-bottom: 33px;
     font-family: Georgia, Times, "Times New Roman", serif;
@@ -179,5 +180,37 @@ html {
   
   /* ----COMPARISON END---- */
   
-  
+  /* ------FOOTER START-----*/
+  .footer {
+    /* Positioning*/
+    position: absolute;
+    bottom: 0;
+
+    /*Box-model */
+    width: 100%;
+    height: 60px;
+    margin-top: 30px;
+
+    /*Visual */
+    background-color: #666;
+  }
+  /* font color */
+  .text-muted-footer {
+    /* Positioning*/
+    margin-top: 15px;
+
+    /*Typography*/
+    color: #fff;
+  }
+
+  .two-toned-footer-color {
+    /*box-model*/
+    height: 6px;
+    padding-top: 3px;
+
+    /*Visual*/
+    background-color: #4aaaa5;
+  }
+
+  /*--------FOOTER END-------*/
   
