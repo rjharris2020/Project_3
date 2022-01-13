@@ -1,9 +1,3 @@
-<<<<<<< Updated upstream
-from flask import Flask, redirect, url_for, render_template
-
-app = Flask(__name__)
-
-=======
 import os
 import pandas as pd
 import json
@@ -44,15 +38,21 @@ def consumption():
     consumption = consumption.drop(columns='_id').T.to_dict()
     return jsonify(consumption)
 
-# @app.route("/api/registrationcount")
+@app.route("/api/transposed")
+def trans():
+    trans = db.transpose_emissions.find()
+    trans = pd.DataFrame(list(trans))
+    trans = trans.drop(columns='_id').T.to_dict()
+    return jsonify(trans)
+
+#user be warned this is 2MM rows of data and will take a long time to load
+# @app.route("/api/evregistrations")
 # def reg_count():
 #     reg_count = db.registrationtest.find()
 #     reg_count = pd.DataFrame(list(reg_count))
 #     reg_count = reg_count.drop(columns='_id').T.to_dict()
-#     reg_count = reg_count.group_by('Registration Valid Date').sum
 #     return jsonify (reg_count)
 
->>>>>>> Stashed changes
 #web page routes 
 @app.route("/")
 def home(): 
@@ -65,14 +65,10 @@ def analysis():
 @app.route("/about")
 def about():
     return  render_template("about.html")
-<<<<<<< Updated upstream
-    
-=======
 
 
 
 
->>>>>>> Stashed changes
 
 if __name__ == "__main__": 
     app.run(debug=True)
