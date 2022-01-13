@@ -41,7 +41,10 @@ def consumption():
 @app.route("/api/transposed")
 def trans():
     trans = db.transpose_emissions.find()
-    trans = pd.DataFrame(list(trans))
+    trans = pd.DataFrame(trans)
+    trans ['Car Registrations'] = trans ['Car Registrations'].fillna(0)
+    trans = trans.rename(columns={'Unnamed: 0':'Year'})
+    trans = trans.set_index('Year')
     trans = trans.drop(columns='_id').T.to_dict()
     return jsonify(trans)
 
