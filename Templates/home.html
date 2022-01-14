@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+ <!--  <title>##Bootstrap Visualization Dashboard</title>  --> 
+
+    <link rel="stylesheet" type="text/css" href="reset.css">
+ 
+    <style type="text/CSS">
+ 
+        /* ----DEFAULT ELEMENT STYLING START---- */
+        html {
+        /* Positioning */
+        position: relative;
+
+        /* Box-model */
+        min-height: 100%;
+        }
+
+        body {
+        /* Positioning */
+        margin-bottom: 150px;
+
+        /* Typography */
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+
+        /* Visual */
+        background-color: #ededed;
+        }
+ 
+        .header{
+            display: flex;
+            padding: 0 10px;
+            background-color: rgb(25, 146, 35);
+        }
+        .header .logo{
+            display: inline-block;
+            padding: 6px 10;
+            text-align: center;
+        }
+        .header .logo{
+                /* Box-model */
+                height: 40px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+
+                /* Positioning */
+                margin-left: 80px;
+                font-family: Georgia, Times, "Times New Roman", serif;
+
+                /* Typography */
+                font-size: 18px;
+                font-weight: bold; text-decoration: none;
+                color: #fff;
+                
+                /* Visual */
+                background: #145e11;
+        }
+
+        .header nav{
+            text-align: right; 
+            width: 100%;
+            font-size: 0;          }  
+        
+        .header nav a{
+            font-size: 16px;
+            color: beige;
+            text-decoration: none;
+            display: inline-block;
+            line-height: 52px;
+            padding: 0 10px;          }
+        .header nav a:hover{background-color: rgb(25, 201, 192); }
+        .banner img{width: 100%;}
+        .path{display: flex;}
+        .path li{position: relative; padding: 6px 8px;}
+        .path li a{color: rgb(44, 143, 138); text-decoration: thicker; font-style: 14px;}
+        .path li + li::before{ content: '/'; color: #aaa; position: absolute; right: 0;}
+        .path li{position: relative; right: 0; bottom: 80px;color: rgb(22, 214, 64);}
+        .about .wrap{display: flex; width: 100%; padding: 10px 10px;}
+        .about .wrap .item{width: 800px; margin: 100 60px; text-align: center;}
+        .about > h2{font-size: 38px; width: 960px; margin:auto; text-align: center; padding: 10px 10px; font-family: serif; 
+            ;font: cursive; font-style: italic;color: rgb(31, 189, 84);}
+        .about > p{width: 50%;margin: auto;padding: 0 0 40px; text-align: center;}
+
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%; height: 30px; padding: 10px 10px;
+            background-color: rgb(25, 78, 52);
+            color: white;
+            text-align: center;
+            }
+     </style>
+</head>
+<body>
+    <div class ="header">
+        <a href="#" class="logo"> EV Good <!--class="logo" to set style logo style-->
+        <!-- <img src="https://fakeimg.pl/80x40/200" alt="Is EV Good"> -->
+        </a>
+    
+        <nav>
+            <a href="#">About Us</a>
+            <a href="#">Home</a>
+            <a href="#">Analysis</a>
+            <a href="#">Data</a>
+            <a href="#">Resource</a>  
+
+        <!--    <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Go To
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Analysis</a></li>
+                  <li><a href="#">Data</a></li>
+                  <li><a href="#">Resource</a></li>
+                  <li class="divider"></li>   seprate line in drowdown-menu 
+                  <li><a href="#">About Us</a></li>
+                </ul>
+            </div>  -->
+
+         <!--     <div class="container-fluid navbar-custom">
+
+                    <div class="row">  
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Go To Ex</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        </button>
+
+                    </div>  -->
+        </nav>       
+    </div>
+
+    <div class="banner">
+        <img src="https://picsum.photos/1200/200/?random=10">
+    </div>
+
+    <ul class="path">
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Analysis</a></li>
+        <li><a href="#">Data</a></li>
+        <li><a href="#">Resource</a> </li>
+    </ul>
+
+    <div class="about">
+        <h2>Alternative Vechicles. Environmentally Friendly or Not?</h2>
+        <div class="wrap">
+            <div class="item">
+                <img src="https://picsum.photos/300/200/?random=1">
+                <h3>Static</h3>
+                <p>
+                    Daily aggregates of EV registrations v carbon emissions over time by all yrs in data set.
+                </p>
+            </div>        
+            <div class="item">
+                <img src="https://picsum.photos/300/200/?random=2">
+                <h3>Description</h3>
+                <p>
+                    Description on Findings and outcomes
+                </p>
+            </div> 
+        </div>
+
+
+        <div class="wrap">          
+            <div class="item">
+                <img src="https://picsum.photos/300/200/?random=3">
+                <h3>JS </h3>
+                <p>*changes* depending on yr Overall yearly carbon emission
+                </p>
+            </div>      
+            <div class="item">
+                <img src="https://picsum.photos/300/200/?random=4">
+                <h3>JS </h3>
+                <p>Compare top 5 EVs registered v Top 5/1 registered “GAS” and carbon footprint
+                </p>
+            </div> 
+        </div>
+
+        <div class="wrap">
+            <div class="item">
+                <img src="image/EV_whitecar.jpeg" alt="#" sizes="200*500" height="300" width="400" aria-posinset="0"> 
+                <textarea name="response" id="" cols="80" rows="10"></textarea>
+            </div>
+        </div>
+       
+    </div>
+
+</div>
+
+
+ <!--   <div class="footer">
+        <p>Footer</p>
+    </div>  -->
+    <!-- Start of footer -->
+    <footer class="footer navbar-fixed-bottom">
+    <div class="two-toned-footer-color"></div>
+    <p class="text-muted text-muted-footer text-center">
+        <b>&copy; Copyright Coding Bootcamp 2022 Team 3</b>
+    </p>
+    </footer>
+    <!-- End of footer -->
+  
+ <!--     jQuery CDN
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  
+      Bootstrap CDN 
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    --> 
+            
+</body>
+</html>
