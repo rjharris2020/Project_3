@@ -1,101 +1,268 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-
+<html lang="en">
+<head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/styles.css') }}">
-
-    <title>Are Electric Vehicles Good?</title>
-
-
-
-  </head>
-
-  <body>
-    <!-- Start of navbar -->
-    <nav class="navbar navbar-default">
-      <div class="container-fluid navbar-custom">
-
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="row">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-              <span class="sr-only">Toggle Navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <div class="col-xs-9 phone-nav">
-              <a class="navbar-brand" href="/" id="logo">Home</a>
-            </div>
-          </div>
-
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right navbar-right-custom">
-              <li><a href="/analysis">Analysis</a></li>
-              <li><a href="/about">About Us</a></li>
-            </ul>
-          </div><!-- /.navbar-collapse -->
-        </div>
-      </div><!-- /.container-fluid -->
-    </nav>
-    <!-- End of navbar -->
-
-    <body>
-      <h1>Julia Cheng</h1>   
-      <img src="Julia.jpeg" alt="Julia"> 
-      <p>
-        Julia works closely with the CEO in an industrial computer manufacturing company based in Taiwan. 
-        She has assisted with the smooth operation of US relations over five years. Julia likes movies, music, reading and traveling. 
-        There are 100 things that Julia wants to know and is unsure how long it takes, but she is up for the challenge!
-      </p>
+    <title>About Us</title>
+    
+    
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style type="text/CSS"> /*reset CSS*/
+        .{margin:0; padding: 0;list-style: none;}
  
+        /* ----DEFAULT ELEMENT STYLING START---- */
+        html {
+        /* Positioning */
+        position: relative;
 
-      <h1>Hazel Morris </h1>
-      <img src="Hazel.jpeg" alt="Hazel">
-      <p>
-        Hazel is a Foster Care supervisor in Atlanta GA. Hazel has a passion for children and families as well
-        as healthcare. Hazel loves nature and spending time with her family. 
-      </p>
+        /* Box-model */
+        min-height: 100%;
+        }
 
-      <h1> Beverley "Scout" Phillip</h1>
-      <img src="Beverly.jpeg" alt="Beverly">
-      <p>
-          Scout is an operations manager for a small rental company based out of Marietta Georgia. 
-          As a humble motorhead, Scout also enjoys reading, gardening, 
-          and building various projects around the home and workplace. 
-      </p>
-  
-      <h1>Rashaye Harris</h1>
-      <img src="Rashaye.jpeg" alt="Rashaye">
-      <p>
-        Rashaye is a Fitness Program Manager for an employee wellness center with over 10 years 
-        of customer service and client-facing health coaching experience. She enjoys spending time with her husband and kids, l
-        earning more about health and fitness, and going to see new movies in the theater.
-      </p>
+        body {
+        /* Positioning */
+        margin-bottom: 150px;
 
-      <h1> Adam Armagost</h1>
-      <img src="Adam.jpeg" alt="Adam">
-      <p>
-          Adam is a Project Manager by trade with 10yr+ years in Technology and Data Science. His hobbies are having hobbies. 
-          He enjoys spending time with his kids & wife, playing paintball, and gardening.  
-          Fun fact, Adam has growing corals in for the past 6 years with the hopes of 
-          using the colonies as seeds for rehabilitating wild coral reefs.
-      </p>
+        /* Typography */
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 
-      <h1> Di Gibson</h1>
-      <img src="Di.jpeg" alt="Di">
-      <p>
-        Di is a Senior Revenue Management Analyst at Molnlycke, a Swedish based company. 
-        In her free time, she enjoysg oing to car shows with her husband, trying out new 
-        restaurants, and working on home projects.
-      </p>
-  </body>
+        /* Visual */
+        background-color: #ededed;
+        }
+ 
+        .header{
+            display: flex;
+            padding: 0 10px;
+            background-color: rgb(25, 146, 35);
+        }
+        .header .logo{
+            display: inline-block;
+            padding: 6px 10;
+            text-align: center;
+        }
+        .header .logo{
+                /* Box-model */
+                height: 40px;
+                padding-top: 5px;
+                padding-bottom: 5px;
 
-  <footer>
-    <p><a href="home.html"> Return to Home Page</a></p>
-  </footer>
+                /* Positioning */
+                margin-left: 80px;
+                font-family: Georgia, Times, "Times New Roman", serif;
+
+                /* Typography */
+                font-size: 18px;
+                font-weight: bold; text-decoration: none;
+                color: #fff;
+                
+                /* Visual */
+                background: #145e11;
+        }
+
+        .header nav{
+            text-align: right; 
+            width: 100%;
+            font-size: 0;          }  
+        
+        .header nav a{
+            font-size: 16px;
+            color: beige;
+            text-decoration: none;
+            display: inline-block;
+            line-height: 52px;
+            padding: 0 10px;          }
+        .header nav a:hover{background-color: rgb(12, 145, 138); }
+        .banner img{width: 100%;}
+        .banner{width: 100%;height: 100%;}
+        .path{display: flex;}
+        .path li{position: relative; padding: 6px 8px;}
+        .path li a{color: rgb(44, 143, 138); text-decoration: thicker; font-style: 14px;}
+        .path li + li::before{ content: '/'; color: rgb(95, 87, 87); position: absolute; left: 0;}
+        .about .wrap{display: flex; width: 90%; padding: 10px 10px;}
+        .about .wrap .item{width: 800px; margin: 200 60px; text-align: center; line-height: 1.5;}
+        .about > h2{font-size: 52px; width: 800px; margin:auto; text-align: center; padding: 10px 10px;  
+            ;font: cursive; font-style: italic; color: rgb(10, 99, 40);font-family: fantasy;}  /* font-family: serif;*/
+        .about > p{width: 50%;margin: auto;padding: 10 30 60px; text-align: justify;font-family: fantasy;line-height: 12px;}
+        /*.about >img{size: auto} ;}*/
+
+        /*for this about html*/
+        .wrap{width: 800px; margin: auto;background-color: rgb(183, 241, 116); display: flex; padding: 10px 10px;}
+        .item{width: 100%;margin: 0 10px;background-color: rgb(254, 255, 233);}
+        .item h3{font-size: 20px; font-family: fantasy;  padding: 10px 10px;color: rgb(24, 102, 47);}
+        .item p{font-size: 18px; font-family: serif; color: rgb(54, 122, 94); text-align: left;margin: 10px 10px;}
+        .item img{width: 50%;vertical-align: top; top: 10px;}
+        .resource > h2{font-size: 52px; width: 800px; margin:auto; text-align: center; padding: 10px 10px;  
+            ;font: cursive; font-style: italic; color: rgb(10, 99, 40);font-family: fantasy;}  /* font-family: serif;*/
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%; height: 30px; padding: 10px 10px;
+            background-color: rgb(25, 78, 52);
+            color: white;
+            text-align: center;
+            }
+        .footer a{position: relative; right: 10px; font-family: serif; flood-color: darkgreen;}
+
+        .footer {
+            position: absolute;
+            z-index: 100;
+            bottom: 0;
+            width: 100%;
+            }
+
+        .footer ul {
+            width: 80%;
+            margin: 2rem auto;
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+           }
+     </style>
+</head>
+<body>
+    <div class ="header">
+        <a href="#" class="logo"> EV Good <!--class="logo" to set style logo style-->
+        <!-- <img src="https://fakeimg.pl/80x40/200" alt="Is EV Good"> -->
+        <!-- <img src="https://picsum.photos/100/50/?random=10" alt="Are EV Good">  -->
+        </a>
+    
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Analysis</a>
+            <a href="#">About Us</a>
+        </nav> 
+
+    </div>
+
+    <div class="banner">
+      <!-- <img src="image/EV_greencar.jpg" alt="pic error">   -->
+      <img src="https://picsum.photos/1200/100/?random=10">  
+    </div>
+        
+    <div class="about">
+        <h2>Aout Us - Team 3</h2> 
+        <div class="wrap">
+            <div class="item">             
+                <img src="image/Adam.jpeg">
+                <h3>Adam Armagost</h3>
+                <p>Adam is a Project Manager by trade with 10yr+ years in Technology and Data Science. </p>
+                <p>His hobbies is having hobbies. He enjoys spending time with his kids & wife, playing paintball, and gardening.</p>
+                <p>Fun fact, Adam has growing corals in for the past 6 years with the hopes of using the colonies as seeds 
+                for rehabilitating wild coral reefs.</p>
+            </div>
+             <div class="item">             
+                <img src="image/Beverly.jpeg">
+                <h3>Beverley "Scout" Phillip</h3>
+                <p>Scout is an operations manager for a small rental company based out of Marietta Georgia. 
+                <p>As a humble motorhead, Scout also enjoys reading, gardening, and building various projects around the home 
+                    and workplace.</p>
+             </div>
+             <div class="item">             
+                <img src="image/Di.jpeg">
+                <h3>Di. Gibson</h3>
+                <p>Di is a Senior Revenue Management Analyst at Molnlycke, a Swedish based company.</p>
+                <p>In her free time, she enjoys going to car shows with her husband, trying out new restaurants, 
+                and working on home projects.</p> 
+             </div>
+             <div class="item">             
+                <img src="image/Hazel.jpeg" alt="Hazel Morris">
+                <h3>Hazel Morris</h3>
+                <p>Hazel is a Foster Care supervisor in Atlanta GA. Hazel has a passion for children and families as well as healthcare. </p>
+                <p>Hazel loves nature and spending time with her family.</p>
+             </div>
+            <div class="item">             
+               <img src="image/Julia.jpeg">
+               <h3>Julia Cheng</h3>
+               <p>Julia works closely with the CEO in an industrial computer manufacturing company based in Taiwan. </p>
+               <p>  She has assisted with the smooth operation of US relations over five years. Julia likes movies, music, 
+                   reading and traveling. </p>
+               <p>  There are 100 things that Julia wants to know and is unsure how long it takes, but she is up for the challenge!</p>
+            </div>
+            <div class="item">             
+                <img src="image/Rashaye.jpeg">
+                <h3>Rashaye Harris</h3>
+                <p>Rashaye is a Fitness Program Manager for an employee wellness center with over 10 years of customer service and 
+                    client-facing health coaching experience. 
+                <p>She enjoys spending time with her husband and kids, earning more about health and fitness, 
+                    and going to see new movies in the theater. </p>
+            </div>
+        </div>
+
+
+ 
+        <div class="resource">
+            <h2>Resource</h2> 
+        </div>
+        <div class="wrap">
+            <div class="item">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                    Beatae, incidunt consequuntur? Sequi impedit iusto architecto obcaecati corporis. Velit, eligendi dolorem!</p>
+               <p><a href="#">resource</a></p>
+               <p><a href="#">resource</a></p>
+               <p><a href="#">resource</a></p>
+               <p><a href="#">resource</a></p>
+               <p><a href="#">resource</a></p>
+            </div>
+        </div>
+        
+       
+   <!--    <div class="wrap">
+            <div class="item">
+               <img src="image/EV_greencar.jpg" alt="pic error"> 
+                <img src="https://picsum.photos/300/200/?random=10"> 
+                <h3>Static</h3>
+                <p>
+                    Daily aggregates of EV registrations v carbon emissions over time by all yrs in data set.
+                </p>
+            </div>        
+            <div class="item">
+                <img src="https://picsum.photos/300/200/?random=10">
+                <h3>Description</h3>
+                <p>
+                    Description on Findings and outcomes
+                </p>
+            </div> 
+        </div>
+
+        
+        <div class="wrap">          
+            <div class="item">
+                <img src="https://picsum.photos/300/200/?random=10">
+                <h3>JS </h3>
+                <p>*changes* depending on yr Overall yearly carbon emission
+                </p>
+            </div>      
+            <div class="item">
+                <img src="https://picsum.photos/300/200/?random=10">
+                <h3>JS </h3>
+                <p>Compare top 5 EVs registered v Top 5/1 registered “GAS” and carbon footprint
+                </p>
+            </div> 
+        </div>--> 
+    <!--    <footer>
+            <p><a href="home.html"> Return to Home Page</a></p>
+            </footer>
+    -->
+    <footer class="footer">
+        <ul class="path">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="analysis.html">Analysis</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+    </footer>
+
+    <!-- Start of footer -->
+    <footer class="footer navbar-fixed-bottom">
+        <div class="two-toned-footer-color"></div>
+            <p class="text-muted text-muted-footer text-center">
+                <b>&copy; Copyright Coding Bootcamp 2022 Team 3</b>
+            </p>
+    </footer>
+    <!-- End of footer -->
+
+    
+</body>
+</html>
