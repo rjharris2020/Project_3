@@ -48,6 +48,14 @@ def trans():
     trans = trans.drop(columns='_id').T.to_dict()
     return jsonify(trans)
 
+@app.route("/api/top5ev")
+def top5():
+    top5 = db.finaltop5ev.find()
+    top5 = pd.DataFrame(top5)
+    # top5 = top5.set_index('Year')
+    top5 = top5.drop(columns='_id').T.to_dict()
+    return jsonify(top5)
+
 #user be warned this is 2MM rows of data and will take a long time to load
 # @app.route("/api/evregistrations")
 # def reg_count():
