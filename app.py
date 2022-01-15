@@ -40,7 +40,7 @@ def consumption():
 
 @app.route("/api/transposed")
 def trans():
-    trans = db.transpose_emissions.find()
+    trans = db.transemissions.find()
     trans = pd.DataFrame(trans)
     trans ['Car Registrations'] = trans ['Car Registrations'].fillna(0)
     trans = trans.rename(columns={'Unnamed: 0':'Year'})
@@ -50,7 +50,7 @@ def trans():
 
 @app.route("/api/top5ev")
 def top5():
-    top5 = db.finaltop5ev.find()
+    top5 = db.final_top5ev.find()
     top5 = pd.DataFrame(top5)
     # top5 = top5.set_index('Year')
     top5 = top5.drop(columns='_id').T.to_dict()
