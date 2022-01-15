@@ -170,9 +170,8 @@ function buildIndicator(year) {
         return Math.sqrt(array.map(x => Math.pow(x - mean, 2)).reduce((a, b) => a + b) / n)
         }
         var dif = Math.round(mean(Object.values(grid)));
-        var stdDev = Math.round(getStandardDeviation(Object.values(grid).slice(0,20)));
-
-        console.log(grid)
+        var stdDev = Math.round(getStandardDeviation(Object.values(grid).slice(11,20)));
+        
 
         var gridEmissions = [{
             title: { text: "Total Emissions vs average", font: {size: 32}},
