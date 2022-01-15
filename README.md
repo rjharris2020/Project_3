@@ -11,6 +11,7 @@ Our EV registration data (fig1) starting in 2010 and increasing initially steadi
 This in part could be due to a variety of additional factors not considered in this initial analysis, and given more time could be additional studies to include. An example of this is population characteristics, employment characteristics,  policies, and more.
 
 ### Figure 1: EVs registrations over time
+![image](https://user-images.githubusercontent.com/88349512/139356835-937d0e39-32ce-4905-b8bf-c5553268830b.png)
 
 ### Figure 2: Emissions over time
 
