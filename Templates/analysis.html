@@ -7,7 +7,7 @@
     <title>Home</title>
  <!--  <title>##Bootstrap Visualization Dashboard</title>  --> 
 
-    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/styles.css">
     <!-- <link rel="stylesheet" href="style.css"> -->
     <style type="text/CSS">
  
@@ -161,11 +161,8 @@
         <h2>Alternative Vechicles. Environmentally Friendly or Not?</h2>
 
         <div class="wrap">
-            <div class="item">
-                <img src="https://picsum.photos/300/200/?random=1">
-                <h3>Static</h3>
-                <p>Daily aggregates of EV registrations v carbon emissions over time by all yrs in data set.
-                </p>
+            <div id="staticChart" class="responsive-plot">
+               
             </div>        
             <div class="item">
                 <img src="https://picsum.photos/300/200/?random=2">
@@ -177,17 +174,11 @@
 
 
         <div class="wrap">          
-            <div class="item">
-                <img src="https://picsum.photos/300/200/?random=3">
-                <h3>JS </h3>
-                <p>*changes* depending on yr Overall yearly carbon emission
-                </p>
+            <div id="gauge" class="responsive-plot">
+                
             </div>      
-            <div class="item">
-                <img src="https://picsum.photos/300/200/?random=10">
-                <h3>JS </h3>
-                <p>Compare top 5 EVs registered v Top 5/1 registered “GAS” and carbon footprint                    
-                </p>
+            <div id="top5ev" class="responsive-plot">
+                
             </div> 
         </div>
     </div>
@@ -219,6 +210,9 @@
       Bootstrap CDN 
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     --> 
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src='https://cdn.plot.ly/plotly-2.8.3.min.js'></script>
+    <script src="/static/js/analysis.js"></script>
             
 </body>
 </html>
