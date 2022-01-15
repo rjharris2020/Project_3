@@ -3,6 +3,10 @@
 ## Project Proposal
 For this project, the group goal was to explore the correlation between alternative vehicle registrations in the state of California and identify if the the increase in registrations correlates to less impact on carbon emissions. 
 
+## Data
+Extract data files in "raw_data.zip" for "clean_data-checkpoint-checkpoint.ipynb" notebook.
+In MongoDB folder, use "EV Data Notebook Final.ipynb" to generate evDB datafile for collections.
+
 ## Analysis
 The conclusion to our analysis includes a look at the trend of Passenger Vehicle emissions in the state of California. There has been an  exponential rise in the year over year registration of Electric Vehicles upon initial analysis however; it does not indicate a meaningful reduction in CO2 emission due to Passenger Vehicle emissions.
 
