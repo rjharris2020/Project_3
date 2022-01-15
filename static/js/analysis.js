@@ -43,7 +43,7 @@ function optionChanged(selection) {
 function buildStaticChart() {
     d3.json ('/api/transposed').then(function(obj) {
         let trans_data = obj;
-
+        console.log(trans_data)
         carRegistrations = [];
         passengerEmissions = [];
         transYear=[];
@@ -174,7 +174,7 @@ function buildIndicator(year) {
         
 
         var gridEmissions = [{
-            title: { text: "Total Emissions vs average", font: {size: 32}},
+            // title: { text: "Total Emissions vs average"},
             type: "indicator",
             mode: "gauge+number+delta",
             value: grid[`${year}.0`],
