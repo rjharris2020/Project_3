@@ -18,3 +18,6 @@ This in part could be due to a variety of additional factors not considered in t
 An interesting finding is the state’s Electrics Generation Emissions over time, which should be considered given EVs are dependent on this as source of mobility. 
 
 The state’s electric grid emissions over the same period of time have decreased steadily year over year. This does lead itself to be being a more sustainable source of power versus more traditional sources.
+
+## Presentation
+https://docs.google.com/presentation/d/1p_Q-6iIcUTfQjnf7rMpb4l1OKF-5ZzN-FBO2nmGmes0/edit?usp=sharing
