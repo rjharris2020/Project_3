@@ -8,10 +8,10 @@ from pymongo import MongoClient
 from flask import Flask, redirect, url_for, render_template, jsonify
 
 app = Flask(__name__)
-
-db_path = "mongodb://localhost:27017/"
+#Note: switch made to web mongoDB db in db_path & the DB name to EVData
+db_path = "mongodb://abarmago:GaTech1234@evdata-shard-00-00.lcvwb.mongodb.net:27017,evdata-shard-00-01.lcvwb.mongodb.net:27017,evdata-shard-00-02.lcvwb.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-g33pj8-shard-0&authSource=admin&retryWrites=true&w=majority"
 mongo = MongoClient(db_path)
-db = mongo.evDB
+db = mongo.EVData
 
 # API Routes
 @app.route("/api/energy")
